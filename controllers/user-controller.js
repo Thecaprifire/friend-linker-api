@@ -29,7 +29,7 @@ const UserController = {
 
   // 4. Update user by ID
   updateUserById(req, res) {
-    User.findOneAndUpdate(req.params.userId, req.body, { new: true }) // Corrected to use 'userId'
+    User.findByIdAndUpdate(req.params.userId, req.body, { new: true }) // Use findByIdAndUpdate
       .then(userData => {
         if (!userData) {
           return res.status(404).json({ message: 'User not found' }); // Handle case where user is not found
@@ -41,7 +41,7 @@ const UserController = {
 
   // 5. Delete user by ID
   deleteUserById(req, res) {
-    User.findOneAndDelete(req.params.userId) // Corrected to use 'userId'
+    User.findByIdAndDelete(req.params.userId) // Use findByIdAndDelete
       .then(userData => {
         if (!userData) {
           return res.status(404).json({ message: 'User not found' }); // Handle case where user is not found
