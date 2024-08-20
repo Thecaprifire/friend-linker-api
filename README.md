@@ -75,7 +75,7 @@ THEN I am able to successfully create and delete reactions to thoughts and add a
 5.	Start the Application:
 	-	Once all dependencies are installed, proceed to run the application using `npm start`.
 6. Testing the API:
-  - Once the server is running, use a tool like Insomnia to interact with the API endpoints.
+   - Once the server is running, use a tool like Insomnia to interact with the API endpoints.
 	-	Access the API at `http://localhost:3001` and test the available routes for categories, products, and tags, checking for successful data creation, updating, and deletion in the database.
 
 
